@@ -4,5 +4,5 @@ module.exports = {
     SECRET: process.env.SECRET ||
     'fb7bb4f459d2eea5d158b1f7a03b678be4601e4c3a9be00ece9109c71eac2913',
     CALLBACK_URL: process.env.CALLBACK_URL ||
-    'http://beskamilk.github.io/material-matters/' //'http://localhost:3000/'
+    'Access-Control-Allow-Origin: http://beskamilk.github.io/material-matters/' //'http://localhost:3000/'
 }
