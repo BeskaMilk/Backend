@@ -16,8 +16,8 @@ const app = express();
 
 //use this to use Unslash photos
 app.get('/api/photos', (req, res) => { 
-    res.setHeader('Access-Control-Allow-Origin', 'https://materialmatters.herokuapp.com/');
-    res.setHeader('Access-Control-Allow-Origin', 'https://beskamilk.github.io/material-matters/');
+     res.setHeader('Access-Control-Allow-Origin', 'https://materialmatters.herokuapp.com/');
+     res.setHeader('Access-Control-Allow-Origin', 'https://beskamilk.github.io/');
     
     unsplash.photos
         .listPhotos(req.query.start, req.query.count)
