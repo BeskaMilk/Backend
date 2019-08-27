@@ -1,0 +1,115 @@
+ .header-color{
+background: black; /*#004FF9*/  
+background: -webkit-linear-gradient(to right, rgb(255, 0, 212), #004FF9);  
+background: linear-gradient(to right, rgb(255, 0, 212), #004FF9);
+background-color: white;
+}
+
+.landing-grid{
+background: white; /*#004FF9*/  
+ background: -webkit-linear-gradient(to right, rgb(255, 0, 212), #004FF9); 
+background: linear-gradient(to right, rgb(255, 0, 212), #004FF9);
+text-align: center;
+position: fixed;
+top: 0;
+width: 100%;
+height: 100%;
+opacity: 20%;
+} */
+
+.feedPage{
+  padding-top: 5em;
+  text-align: center;
+  margin: auto;
+}
+
+.material-img{
+  height: 250px;
+  padding-top: 5em;
+  text-align: center;
+}
+
+.banner-text{
+  opacity: .8;
+  width: 75%;
+  margin: auto;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.banner-text h1 {
+  font-size: 60px;
+  font-weight: bold;
+  color: white;
+  margin: auto;
+  text-align: center;
+}
+
+.banner-text h2 {
+  font-size: 27px;
+  font-weight: bold;
+  color: white;
+  margin: auto;
+  text-align: center;
+}
+
+.banner-text hr{
+  border-top: 2px dotted white;
+  width: 50%;
+  margin: auto;
+}
+
+.banner-text p {
+  color: white;
+  font-size: 13px;
+  padding: 1em;
+}
+
+.social-links{
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin: auto;
+}
+
+.social-links i {
+  color: white;
+  font-size: 5em;
+  padding: 8px;
+}
+
+.foot{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+}
+
+
+
+
+/* ---------- here is for the Infinite Scroll Challenge ---------- */
+
+.title {
+  font-family: "Carter One";
+}
+.container {
+  margin-top: 50px;
+  text-align: center;
+}
+
+/* Optional style for fetched images */
+.images {
+  display: flex;
+  max-width: 80%;
+  margin: 2% auto;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.single-photo {
+  max-width: 300px;
+  align-self: auto;
+  margin: 1% 2px;
+  flex-grow: 1;
+  vertical-align: middle;
+}
