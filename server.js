@@ -33,7 +33,7 @@ app.get('/api/photos', (req, res) => {
 //   });
 
 
-const BACKEND = process.env.CALLBACK_URL || 'https://beskamilk.github.io/backend/' //'Access-Control-Allow-Origin: https://materialmatters.herokuapp.com/'
+const BACKEND = process.env.CALLBACK_URL || 'http://beskamilk.github.io/backend/' //'Access-Control-Allow-Origin: https://materialmatters.herokuapp.com/'
 
 //app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
 
