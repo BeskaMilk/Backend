@@ -2,9 +2,15 @@ import React, { Component } from 'react'
 import axios from 'axios';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import Image from './Image';
+const express = require('express');
+const app = express();
 
 
-  
+app.use(function (req, res, next) {
+    res.setHeader('Access-Control-Allow-Origin', 'https://materialmatters.herokuapp.com/');
+    res.setHeader('Access-Control-Allow-Origin', 'https://beskamilk.github.io/material-matters/');
+    next();
+  });
 
 export class Images extends Component {
     state= {
@@ -13,9 +19,10 @@ export class Images extends Component {
         start: 1
     }
 
+    
+
     componentDidMount(){
         const { count, start } = this.state;
-        
         axios
             .get(`/api/photos?count=${count}&start=${start}`) //.get(`/api/photos?count=${count}&start=${start}`)
             .then(res => this.setState({ images: res.data }));
