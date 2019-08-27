@@ -16,6 +16,9 @@ const app = express();
 
 //use this to use Unslash photos
 app.get('/api/photos', (req, res) => { 
+    res.setHeader('Access-Control-Allow-Origin', 'https://materialmatters.herokuapp.com/');
+    res.setHeader('Access-Control-Allow-Origin', 'https://beskamilk.github.io/material-matters/');
+    
     unsplash.photos
         .listPhotos(req.query.start, req.query.count)
         .then(toJson)
@@ -23,6 +26,11 @@ app.get('/api/photos', (req, res) => {
 });
 
 //const PORT = process.env.PORT || 5000;
+
+// app.use(function (req, res, next) {
+//     res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
+//     next();
+//   });
 
 
 const BACKEND = process.env.CALLBACK_URL || 'https://materialmatters.herokuapp.com/'
