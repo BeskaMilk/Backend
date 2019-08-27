@@ -25,7 +25,7 @@ export class Images extends Component {
     componentDidMount(){
         const { count, start } = this.state;
         axios
-            .get(`/api/photos?count=${count}&start=${start}`) //.get(`/api/photos?count=${count}&start=${start}`)
+            .get(`urn:ietf:wg:oauth:2.0:oob/api/photos?count=${count}&start=${start}`) //.get(`/api/photos?count=${count}&start=${start}`)
             .then(res => this.setState({ images: res.data }));
     }
 
@@ -35,7 +35,7 @@ export class Images extends Component {
         
         this.setState({start: this.state.start + count});
         axios
-            .get(`/api/photos?count=${count}&start=${start}`) //.get(`/api/photos?count=${count}&start=${start}`)
+            .get(`urn:ietf:wg:oauth:2.0:oob/api/photos?count=${count}&start=${start}`) //.get(`/api/photos?count=${count}&start=${start}`)
             .then(res => 
                 this.setState({ images: this.state.images.concat(res.data) })
             );
