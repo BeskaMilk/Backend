@@ -39,7 +39,7 @@ const app = express();
 //     )
 //   });
 
-  app.use(express.static(__dirname));
+  app.use(express.static(__dirname + "/frontend"));
 
 
 
@@ -48,7 +48,7 @@ app.get('/api/photos', (req, res) => {
     unsplash.photos
         .listPhotos(req.query.start, req.query.count)
         .then(toJson)
-        .then(json => res.json(json));
+        .then(json => res.json(json)); 
     console.log("getting photos from unsplash")
 });
 
