@@ -40,7 +40,7 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://beskamilk.github.io/backend/",
+  "proxy": "http://localhost:5000/",
   "devDependencies": {
     "gh-pages": "^2.0.1"
   }
