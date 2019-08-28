@@ -25,6 +25,10 @@ app.use((req, res, next) => {
 app.get('/api/photos', (req, res) => {
     request(
       { url: 'https://api.unsplash.com/api/photos' },
+      unsplash.photos
+         .listPhotos(req.query.start, req.query.count)
+         .then(toJson)
+         .then(json => res.json(json)),
       (error, response, body) => {
         if (error || response.statusCode !== 200) {
           return res.status(500).json({ type: 'error', message: err.message });
