@@ -4,7 +4,7 @@ const Unsplash = require('unsplash-js').default;
 const toJson = require('unsplash-js').toJson;
 const express = require('express');
 
-const request = require('request');
+// const request = require('request');
 // const cors = require('cors')
 
 
@@ -22,30 +22,34 @@ app.use((req, res, next) => {
   });
 
   // added
-app.get('/api/photos', (req, res) => {
-    request(
-      { url: 'https://material-matters.appspot.com/api/photos' },
-      unsplash.photos
-         .listPhotos(req.query.start, req.query.count)
-         .then(toJson)
-         .then(json => res.json(json)),
-      (error, response, body) => {
-        if (error || response.statusCode !== 200) {
-          return res.status(500).json({ type: 'error', message: err.message });
-        }
+// app.get('/api/photos', (req, res) => {
+//     request(
+//       { url: 'https://material-matters.appspot.com/api/photos' },
+//       unsplash.photos
+//          .listPhotos(req.query.start, req.query.count)
+//          .then(toJson)
+//          .then(json => res.json(json)),
+//       (error, response, body) => {
+//         if (error || response.statusCode !== 200) {
+//           return res.status(500).json({ type: 'error', message: err.message });
+//         }
   
-        res.json(JSON.parse(body));
-      }
-    )
-  });
+//         res.json(JSON.parse(body));
+//       }
+//     )
+//   });
+
+  app.use(express.static(__dirname));
+
+
 
 //use this to use Unslash photos
-// app.get('/api/photos', (req, res) => {    
-//     unsplash.photos
-//         .listPhotos(req.query.start, req.query.count)
-//         .then(toJson)
-//         .then(json => res.json(json));
-// });
+app.get('/api/photos', (req, res) => {    
+    unsplash.photos
+        .listPhotos(req.query.start, req.query.count)
+        .then(toJson)
+        .then(json => res.json(json));
+});
 
 const PORT = process.env.PORT || 5000;
 
