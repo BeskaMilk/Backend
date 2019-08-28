@@ -16,10 +16,10 @@ const unsplash =new Unsplash({
 
 const app = express();
 
-app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', '*');
-    next();
-  });
+// app.use((req, res, next) => {
+//     res.header('Access-Control-Allow-Origin', '*');
+//     next();
+//   });
 
   // added
 // app.get('/api/photos', (req, res) => {
