@@ -51,6 +51,10 @@ app.get('/api/photos', (req, res) => {
         .then(json => res.json(json));
 });
 
+app.get("/material-matters", function(req, res) { //in the tut, it's "/", not "/material-matters"
+    res.render("index");
+})
+
 const PORT = process.env.PORT || 5000;
 
 //const BACKEND = process.env.CALLBACK_URL || 'http://beskamilk.github.io/backend/' //'Access-Control-Allow-Origin: https://materialmatters.herokuapp.com/'
