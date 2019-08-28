@@ -49,10 +49,12 @@ app.get('/api/photos', (req, res) => {
         .listPhotos(req.query.start, req.query.count)
         .then(toJson)
         .then(json => res.json(json));
+    console.log("getting photos from unsplash")
 });
 
 app.get("/material-matters", function(req, res) { //in the tut, it's "/", not "/material-matters"
     res.render("index");
+    console.log("backend talking to front end");
 })
 
 const PORT = process.env.PORT || 5000;

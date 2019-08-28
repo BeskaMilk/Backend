@@ -24,9 +24,11 @@ export class Images extends Component {
 
     componentDidMount(){
         const { count, start } = this.state;
+        console.log("componentDidMount");
         axios
             .get(`http://beskamilk.github.io/material-matters/api/photos?count=${count}&start=${start}`) //.get(`/api/photos?count=${count}&start=${start}`)
             .then(res => this.setState({ images: res.data }));
+        
     }
 
     fetchImages = () => {
