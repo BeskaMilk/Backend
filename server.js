@@ -24,7 +24,7 @@ app.use((req, res, next) => {
   // added
 app.get('/api/photos', (req, res) => {
     request(
-      { url: 'https://api.unsplash.com/api/photos' },
+      { url: 'https://material-matters.appspot.com/api/photos' },
       unsplash.photos
          .listPhotos(req.query.start, req.query.count)
          .then(toJson)
